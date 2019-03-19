@@ -10,6 +10,8 @@ app.use(express.static('public'))
 
 const bookmarkController = require('./controllers/bookmarks.js')
 
+const PORT = process.env.PORT || 3000
+
 const uri = 'mongodb://emily:VBhQaVFYwHhecq4@ds117846.mlab.com:17846/heroku_2m3d047j' || 'mongodb://localhost:27017/bookmrkdown'
 
 app.use('/bookmarks', bookmarkController)
@@ -26,6 +28,6 @@ mongoose.connection.once('open', () => {
 //     console.log('added bookmarks');
 //   })
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('listening...');
 })
