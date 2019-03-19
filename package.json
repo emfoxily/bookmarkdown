@@ -1,0 +1,25 @@
+{
+  "name": "bookmarkdown",
+  "version": "1.0.0",
+  "description": "Bookmark app for software engineering resources",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emfoxily/bookmarkdown.git"
+  },
+  "author": "E. Reno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emfoxily/bookmarkdown/issues"
+  },
+  "homepage": "https://github.com/emfoxily/bookmarkdown#readme"
+}

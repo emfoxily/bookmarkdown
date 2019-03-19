@@ -1,0 +1,129 @@
+body {
+    background: whitesmoke;
+    font-family: arial;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 2.5vw;
+  }
+  
+  h1 {
+    font-size: 10vw;
+  }
+  
+  h1 img {
+    width: 12.2%;
+  }
+  
+  form {
+    margin-top: 10%;
+    width: 100%;
+  }
+  
+  input {
+    background: white;
+    font-size: 2vw;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2%;
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+    cursor: pointer;
+  }
+  
+  button {
+    display: flex;
+    background: transparent;
+    width: 10%;
+    height: 10%;
+    padding: 1%;
+    border: none;
+    border-radius: 1vw;
+    font-size: 3vw;
+    float: right;
+    margin-top: -10px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  
+  ul {
+    background: white;
+    width: 75%;
+    margin: 5% 10vw;
+    border-radius: 1vw;
+  }
+  
+  li {
+    width: 50%;
+    padding: 2%;
+    margin: auto;
+    list-style: none;
+  }
+  
+  .container {
+    width: 100%;
+  }
+  
+  .edit {
+    background: black;
+    color: white;
+    width: 50%;
+  }
+  
+  .search {
+    width: 85%;
+  }
+  
+  .search:hover {
+    animation: rainbow;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: white;
+  }
+  
+  @keyframes rainbow {
+    10% {
+      background: rgb(255, 108, 108);
+    }
+    20% {
+      background: rgb(255, 143, 113);
+    }
+    30% {
+      background: rgb(252, 167, 112);
+    }
+    40% {
+      background: rgb(252, 195, 119);
+    }
+    50% {
+      background: rgb(255, 231, 144);
+    }
+    60% {
+      background: rgb(232, 252, 134);
+    }
+    70% {
+      background: rgb(166, 250, 131);
+    }
+    80% {
+      background: rgb(148, 251, 229);
+    }
+    85% {
+      background: rgb(128, 222, 251);
+    }
+    90% {
+      background: rgb(158, 157, 251);
+    }
+    95% {
+      background: rgb(202, 163, 251);
+    }
+    100% {
+      background: rgb(249, 160, 254);
+    }
+  }
+  

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="Bookmarks">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bookmarkdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="MainController as ctrl">
+    <div class="container">
+        <h1>
+          book<img src="./assets/markdown.png" alt="markdown">
+        </h1>
+  
+        <input type="text" ng-model="searchBox" placeholder="&#128269; search" class="search">
+  
+        <form ng-submit="ctrl.createBookmark()"/>
+          <input type="text" placeholder="website" ng-model="ctrl.website"/>
+          <input type="text" placeholder="http://" ng-model="ctrl.url"/>
+          <input type="text" placeholder="tag" ng-model="ctrl.tags"/>
+          <input type="submit" value="+"/>
+        </form>
+        <ul>
+          <li ng-repeat="bookmark in ctrl.bookmarks | filter:searchBox | orderBy: 'website'">
+            <a href="{{ bookmark.url }}">
+              {{ bookmark.website }}
+            </a>
+            <button ng-click="ctrl.deleteBookmark(bookmark)">☒</button>
+            <a href="#" ng-click="ctrl.showEdit = $index">✎</a>
+            <form ng-if="$index === ctrl.showEdit" ng-submit="ctrl.editBookmark(bookmark)">
+              <input type="text" ng-model="ctrl.editedWebsite" placeholder="website" class="edit"/>
+              <input type="text" ng-model="ctrl.editedUrl" placeholder="url" class="edit"/>
+              <input type="text" ng-model="ctrl.editedTags" placeholder="tag" class="edit"/>
+              <input type="submit" value="apply changes">
+            </form>
+          </li>
+        </ul>
+      </div>
+</body>
+</html>
